@@ -1,287 +1,879 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =====================================================
+   CORES
+===================================================== */
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f7f3ed;
-  color: #17252b;
-}
-
-button {
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-}
-
-.app {
-  width: 100%;
-  min-height: 100vh;
+:root {
+  --azul: #075d6a;
+  --azul-escuro: #004852;
+  --azul-claro: #0d7480;
+  --bege: #f7f2eb;
+  --bege-escuro: #eee5da;
+  --branco: #ffffff;
+  --texto: #171717;
+  --cinza: #777;
 }
 
 
-/* ================= HEADER ================= */
+/* =====================================================
+   HEADER
+===================================================== */
 
 .header {
-  height: 85px;
-  width: 100%;
-
+  height: 76px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: 0 6%;
-
-  background: #ffffff;
-
-  border-bottom: 1px solid #e3ddd5;
+  padding: 0 5%;
+  border-bottom: 1px solid #e6e0d9;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-
-  color: #075568;
+  gap: 9px;
+  color: var(--azul);
 }
 
-.logo-wave {
-  font-size: 38px;
-  font-weight: bold;
+.logo-icon {
+  font-size: 35px;
+  line-height: 1;
 }
 
-.logo h2 {
+.logo strong {
+  display: block;
+  font-family: Georgia, serif;
   font-size: 20px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
-.logo small {
+.logo span {
+  display: block;
   font-size: 7px;
   letter-spacing: 3px;
 }
 
-
-.header nav {
+.nav {
   display: flex;
-  gap: 35px;
-}
-
-.header nav a {
-  color: #263238;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
+  gap: 30px;
   font-size: 12px;
 }
 
-.header nav a:hover {
-  color: #087086;
+.nav a {
+  padding: 10px 0;
+}
+
+.nav a:hover {
+  color: var(--azul);
+}
+
+.header-button {
+  border: 0;
+  background: var(--azul);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 5px;
+  font-size: 11px;
 }
 
 
-.btn-reserva {
-  background: #075568;
-  color: white;
+/* =====================================================
+   BOTÕES
+===================================================== */
 
+.primary-button {
   border: none;
-  border-radius: 4px;
-
-  padding: 13px 22px;
-
+  background: var(--azul);
+  color: white;
+  padding: 13px 25px;
+  border-radius: 5px;
+  font-weight: bold;
   font-size: 11px;
+}
+
+.primary-button:hover {
+  background: var(--azul-escuro);
+}
+
+.outline-button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.full {
+  width: 100%;
+}
+
+.cancel-button {
+  border: 1px solid #aaa;
+  background: white;
+  padding: 12px 22px;
+  border-radius: 5px;
+}
+
+.details-button {
+  border: none;
+  background: var(--azul);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 9px;
   font-weight: bold;
 }
 
 
-/* ================= HERO ================= */
+/* =====================================================
+   HOME
+===================================================== */
 
 .hero {
-  min-height: 450px;
-
-  display: flex;
-  align-items: center;
-
+  height: 420px;
   background:
     linear-gradient(
-      rgba(0, 35, 43, 0.35),
-      rgba(0, 35, 43, 0.35)
+      rgba(0, 30, 40, 0.35),
+      rgba(0, 30, 40, 0.35)
     ),
-    linear-gradient(
-      120deg,
-      #759eaa,
-      #e4b477,
-      #176070
-    );
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
 
   background-size: cover;
   background-position: center;
 
-  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 12%;
 }
 
 .hero-content {
-  width: 50%;
-  margin-left: 8%;
+  color: white;
 }
 
 .hero h1 {
-  font-size: 50px;
-  line-height: 1.1;
+  font-family: Georgia, serif;
+  font-size: 48px;
   font-style: italic;
   font-weight: normal;
-  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
 .hero p {
-  font-family: Arial, sans-serif;
-  font-size: 15px;
+  margin: 20px 0;
   line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: 14px;
 }
 
 .hero-buttons {
   display: flex;
+  gap: 12px;
+}
+
+.destaques {
+  padding: 25px 5%;
+  background: #fff;
+}
+
+.destaques h2 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.destaques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
 
-.btn-principal,
-.btn-secundario {
-  padding: 13px 25px;
-
-  border-radius: 5px;
-
-  font-size: 11px;
-  font-weight: bold;
-}
-
-.btn-principal {
-  border: none;
-  background: #087086;
-  color: white;
-}
-
-.btn-secundario {
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-}
-
-
-/* ================= DESTAQUES ================= */
-
-.destaques {
-  padding: 35px 6%;
-  background: #f8f5ef;
-}
-
-.destaques > h2 {
-  text-align: center;
-
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-
-  margin-bottom: 20px;
-
-  letter-spacing: 1px;
-}
-
-.pratos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.prato-card {
-  background: white;
-
-  border: 1px solid #ddd7ce;
-  border-radius: 8px;
-
+.home-card {
+  border: 1px solid #e2ddd6;
+  border-radius: 7px;
   overflow: hidden;
+  background: white;
+  cursor: pointer;
 }
 
-.prato-imagem {
-  height: 170px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #d9c29e;
-
-  font-size: 70px;
+.home-card:hover {
+  transform: translateY(-2px);
 }
 
-.prato-card h3 {
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-
-  padding: 12px 12px 3px;
+.home-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
-.prato-card p {
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-
-  padding: 0 12px 14px;
-
-  color: #555;
+.home-card-info {
+  padding: 9px;
 }
 
+.home-card-info strong {
+  display: block;
+  font-size: 12px;
+}
 
-/* ================= FOOTER ================= */
+.home-card-info span {
+  display: block;
+  font-size: 10px;
+  margin-top: 5px;
+}
 
 .footer {
+  background: var(--azul);
+  color: white;
   min-height: 70px;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  padding: 15px 5%;
-
-  background: #064d5b;
-
-  color: white;
-
-  font-family: Arial, sans-serif;
   font-size: 10px;
-
   line-height: 1.5;
 }
 
 
-/* ================= RESPONSIVO ================= */
+/* =====================================================
+   LOGIN / CADASTRO
+===================================================== */
+
+.auth-page {
+  min-height: 100vh;
+}
+
+.auth-background {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(20, 80, 95, 0.15),
+      rgba(20, 80, 95, 0.15)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-box {
+  width: 380px;
+  background: rgba(255,255,255,0.96);
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.auth-logo {
+  font-size: 38px;
+  color: var(--azul);
+}
+
+.auth-box h1 {
+  color: var(--azul);
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.auth-box > small {
+  color: var(--azul);
+  font-size: 7px;
+  letter-spacing: 3px;
+}
+
+.auth-box h2 {
+  margin-top: 25px;
+  font-family: Georgia, serif;
+}
+
+.auth-box > p {
+  font-size: 11px;
+  color: #555;
+  margin: 8px 0 20px;
+}
+
+.auth-box label {
+  display: block;
+  text-align: left;
+  font-size: 10px;
+  margin: 12px 0 5px;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5d0ca;
+  border-radius: 5px;
+  outline: none;
+}
+
+.auth-box input:focus {
+  border-color: var(--azul);
+}
+
+.forgot {
+  display: block;
+  border: none;
+  background: transparent;
+  color: var(--azul);
+  font-size: 10px;
+  margin: 9px 0 18px;
+}
+
+.auth-bottom {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+.auth-bottom button {
+  border: none;
+  background: transparent;
+  color: var(--azul);
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
+/* =====================================================
+   ADMIN / SIDEBAR
+===================================================== */
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bege);
+}
+
+.sidebar {
+  width: 210px;
+  background: var(--azul-escuro);
+  color: white;
+  min-height: 100vh;
+  padding: 25px 15px;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 45px;
+}
+
+.sidebar-logo strong {
+  display: block;
+  font-family: Georgia, serif;
+}
+
+.sidebar-logo span {
+  font-size: 6px;
+  letter-spacing: 2px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-menu a,
+.sidebar-menu button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: left;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu button:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.admin-content {
+  flex: 1;
+  padding: 35px;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-page {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-top h1 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+}
+
+.dashboard-top p {
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.profile span {
+  font-size: 25px;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.summary-card {
+  background: white;
+  padding: 22px;
+  border-radius: 9px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.summary-card h3 {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.numbers div {
+  text-align: center;
+}
+
+.numbers strong {
+  display: block;
+  font-size: 20px;
+  color: var(--azul);
+}
+
+.numbers span {
+  font-size: 9px;
+  color: #777;
+}
+
+.summary-card p {
+  font-size: 11px;
+  margin: 8px 0;
+}
+
+.summary-card .primary-button {
+  margin-top: 10px;
+}
+
+.dashboard-title {
+  margin: 30px 0 15px;
+}
+
+.dashboard-title h2 {
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.dashboard-dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.dashboard-dish {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dashboard-dish img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.dashboard-dish strong,
+.dashboard-dish span {
+  display: block;
+  padding-left: 10px;
+}
+
+.dashboard-dish strong {
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.dashboard-dish span {
+  font-size: 10px;
+  padding-bottom: 10px;
+  margin-top: 4px;
+}
+
+.dashboard-menu-button {
+  display: block;
+  margin: 25px auto;
+}
+
+
+/* =====================================================
+   CARDÁPIO
+===================================================== */
+
+.cardapio-page {
+  background: var(--bege);
+  min-height: calc(100vh - 76px);
+  padding: 40px 7%;
+}
+
+.cardapio-title {
+  text-align: center;
+}
+
+.cardapio-title h1 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+}
+
+.title-wave {
+  color: var(--azul);
+  font-size: 30px;
+  margin-top: -5px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 25px 0;
+}
+
+.categories button {
+  border: none;
+  background: transparent;
+  font-size: 10px;
+  padding: 9px 15px;
+}
+
+.categories .active {
+  background: var(--azul);
+  color: white;
+  border-radius: 4px;
+}
+
+.menu-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 90px 1fr 80px 110px;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  background: white;
+  border-bottom: 1px solid #e2ddd6;
+}
+
+.menu-item img {
+  width: 80px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.menu-description h3 {
+  font-size: 12px;
+}
+
+.menu-description p {
+  color: #777;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.menu-price {
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   FORMULÁRIOS DE PRATO
+===================================================== */
+
+.admin-form-page {
+  max-width: 700px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.admin-form-page h1 {
+  font-family: Georgia, serif;
+  margin-bottom: 25px;
+}
+
+.admin-form-page label {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 14px 0 6px;
+}
+
+.admin-form-page input,
+.admin-form-page textarea,
+.admin-form-page select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #d5d0ca;
+  border-radius: 4px;
+  background: white;
+}
+
+.admin-form-page textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.upload-box {
+  height: 120px;
+  border: 1px dashed #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.upload-box span {
+  font-size: 30px;
+}
+
+.upload-box p {
+  font-size: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.current-image {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.current-image img {
+  width: 95px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.current-image button {
+  background: white;
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  padding: 9px;
+  border-radius: 4px;
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   DETALHES
+===================================================== */
+
+.details-page {
+  background: var(--bege);
+  min-height: calc(100vh - 76px);
+  padding: 35px 7%;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+  font-size: 10px;
+  margin-bottom: 25px;
+}
+
+.details-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.details-image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-info h1 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+}
+
+.details-info h2 {
+  color: var(--azul);
+  font-size: 18px;
+  margin: 10px 0 20px;
+}
+
+.details-info p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.details-info h3 {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.quantity > span {
+  font-size: 11px;
+}
+
+.quantity div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+.quantity button {
+  border: none;
+  background: white;
+  padding: 7px 11px;
+}
+
+.quantity strong {
+  padding: 0 12px;
+}
+
+.also-title {
+  margin: 40px 0 15px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.recommendations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.recommendations div {
+  background: white;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.recommendations img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.recommendations strong,
+.recommendations span {
+  display: block;
+  padding: 5px 10px;
+}
+
+.recommendations strong {
+  font-size: 11px;
+}
+
+.recommendations span {
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
 
 @media (max-width: 800px) {
 
   .header {
-    height: auto;
-    padding: 20px;
-    flex-direction: column;
-    gap: 20px;
+    padding: 0 20px;
   }
 
-  .header nav {
-    gap: 15px;
+  .nav {
+    display: none;
   }
 
-  .hero-content {
-    width: 80%;
-    margin-left: 10%;
+  .hero {
+    padding-left: 8%;
   }
 
   .hero h1 {
-    font-size: 38px;
+    font-size: 35px;
   }
 
-  .pratos {
+  .destaques-grid,
+  .dashboard-dishes,
+  .recommendations {
     grid-template-columns: 1fr;
   }
 
-  .footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+  .dashboard-cards,
+  .details-content {
+    grid-template-columns: 1fr;
   }
+
+  .sidebar {
+    width: 170px;
+  }
+
+  .menu-item {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .menu-price,
+  .details-button {
+    grid-column: 2;
+  }
+
 }
