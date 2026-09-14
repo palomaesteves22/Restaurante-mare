@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f7f3ed;
+  color: #17252b;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+  height: 85px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3ddd5;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #075568;
+}
+
+.logo-wave {
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.logo h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.logo small {
+  font-size: 7px;
+  letter-spacing: 3px;
+}
+
+
+.header nav {
+  display: flex;
+  gap: 35px;
+}
+
+.header nav a {
+  color: #263238;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.header nav a:hover {
+  color: #087086;
+}
+
+
+.btn-reserva {
+  background: #075568;
+  color: white;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 13px 22px;
+
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 35, 43, 0.35),
+      rgba(0, 35, 43, 0.35)
+    ),
+    linear-gradient(
+      120deg,
+      #759eaa,
+      #e4b477,
+      #176070
+    );
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.hero-content {
+  width: 50%;
+  margin-left: 8%;
+}
+
+.hero h1 {
+  font-size: 50px;
+  line-height: 1.1;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-principal,
+.btn-secundario {
+  padding: 13px 25px;
+
+  border-radius: 5px;
+
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.btn-principal {
+  border: none;
+  background: #087086;
+  color: white;
+}
+
+.btn-secundario {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+
+
+/* ================= DESTAQUES ================= */
+
+.destaques {
+  padding: 35px 6%;
+  background: #f8f5ef;
+}
+
+.destaques > h2 {
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  margin-bottom: 20px;
+
+  letter-spacing: 1px;
+}
+
+.pratos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.prato-card {
+  background: white;
+
+  border: 1px solid #ddd7ce;
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.prato-imagem {
+  height: 170px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d9c29e;
+
+  font-size: 70px;
+}
+
+.prato-card h3 {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  padding: 12px 12px 3px;
+}
+
+.prato-card p {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+
+  padding: 0 12px 14px;
+
+  color: #555;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+  min-height: 70px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 15px 5%;
+
+  background: #064d5b;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header nav {
+    gap: 15px;
+  }
+
+  .hero-content {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .pratos {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
